@@ -1,0 +1,711 @@
+<style>
+    .circle-with-border {
+        /* Create a circle shape using border-radius */
+        border-radius: 50%;
+
+        /* Add a border to the top half of the circle */
+        border-top: 1px solid #000;
+
+        /* Center the text inside the circle */
+        text-align: center;
+    }
+
+    .inner-circle {
+        /* Create a circle shape using border-radius */
+        border-radius: 0%;
+
+        /* Set the height and width of the circle */
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from 1101.co.uk/support/partner-care by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY">
+
+    <link rel="icon" type="image/svg+xml" href="../images/fav/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/fav/favicon.png">
+    <link rel="preload" as="style" href="../build/assets/app.24cf4eb9.css" /><link rel="stylesheet" href="../build/assets/app.24cf4eb9.css" />
+        <title>Partner Care Support - 1101</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Digital",
+          "image": [
+            "https://1101.co.uk/images/logo/1101-logo.svg",
+            "../images/heros/home-hero.svg",
+            "../images/staff_images/Oz.png"
+           ],
+          "name": "1101 Digital Transformation",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sum Studios",
+            "addressLocality": "Sheffield",
+            "addressRegion": "",
+            "postalCode": "S2 3AQ",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.3613232,
+            "longitude": -1.4685612
+          },
+          "url": "https://1101.co.uk",
+          "telephone": "0333 444 1101",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          ]
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-purple">
+
+        <div class="flex flex-col">
+        <style wire:id="zbsxR7bBkCZ8AE7g0OD3" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;zbsxR7bBkCZ8AE7g0OD3&quot;,&quot;name&quot;:&quot;navigation-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;support\/partner-care&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;f5535db1&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;0e7165334daf25a7a957f146fc4f16507e0fa1a1cdab14663a49cb4e590b398a&quot;}}">
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    /* The sidebar links */
+    .sidebar a {
+        /* padding: 0px 0px 0px 32px; */
+        text-decoration: none;
+        /* font-size: 25px; */
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    /* The button used to open the sidebar */
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #dbdee8;
+    }
+</style>
+
+<header>
+    <div class="py-4">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex flex-col gap-y-4 text-left text-black justify-left">
+                <div>
+                    <img src="../images/logo/1101-logo.svg" class="w-32 mx-auto mb-4">
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault3" data-dropdown-toggle="dropdown3"
+                        class="pr-2" href="../support.html">Digital Essentials<svg class="pr-2 ml-2 w-4 h-4"
+                            aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown3"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault3">
+                            <li>
+                                <a href="../support.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                            </li>
+                            <li>
+                                <a href="../security.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                            </li>
+                            <li>
+                                <a href="../backup.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                    & Disaster Recovery </a>
+                            </li>
+                            <li>
+                                <a href="../security/mobile-device.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                    Device Management </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault4" data-dropdown-toggle="dropdown4"
+                        class="pr-2" href="../support.html">Digital Transformation<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown4"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault4">
+                            <li>
+                                <a href="../cloud.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                    Consultancy</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/business-intelligence.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                    Intelligence</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/power-platform.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                    Platform</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/sharepoint.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefaultAbout"
+                        data-dropdown-toggle="dropdownAbout" class="pr-2" href="../support.html">About<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdownAbout"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultAbout">
+                            <li>
+                                <a href="../about.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="../team.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                            </li>
+                            <li>
+                                <a href="../industry.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                            </li>
+                            <li>
+                                <a href="../guiding-principles.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                    Principles</a>
+                            </li>
+                            <li>
+                                <a href="../files/1101TermsandConditions.pdf"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl hover:underline pl-4">
+                    <a class="pr-2" href="../contact-us.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex justify-between pt-2">
+                <div class="flex items-center">
+                    <a href="../index.html"><img class="h-24 md:h-32 p-2"
+                            src="../images/logo/1101-logo.svg"></a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex flex-col items-stretch gap-y-2">
+
+                        <div
+                            class="flex flex-row justify-end text-bright-yellow text-xs font-bold hidden sm:block text-right">
+                            <a class="mr-2" href='http://remote.1101.co.uk/'>Remote Support</a>
+                            <a class="mr-2" href='https://1101.myportallogin.co.uk/'>Support Portal</a>
+                            <a class="mr-2" href='https://app.eu.myglue.com/'>Knowledgebase</a>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <div class="font-bold text-xs hidden sm:block">
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-phone-50.png'>
+                                    <a href="tel:03334441101">0333 444 1101</a>
+                                </div>
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-mail-50.png'>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-x-2 md:gap-x-4 text-sm font-medium hidden sm:block">
+                            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                                class="text-center inline-flex items-center" type="button">Digital Essentials<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault">
+                                    <li>
+                                        <a href="../support.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="../security.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                                    </li>
+                                    <li>
+                                        <a href="../backup.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                            & Disaster Recovery </a>
+                                    </li>
+                                    <li>
+                                        <a href="../security/mobile-device.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                            Device Management </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button id="dropdownDefault2" data-dropdown-toggle="dropdown2"
+                                class="text-center inline-flex items-center" type="button">Digital Transformation<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown2"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault2">
+                                    <li>
+                                        <a href="../cloud.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                            Consultancy</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/business-intelligence.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                            Intelligence</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/power-platform.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                            Platform</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/sharepoint.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="dropdownDefault3" data-dropdown-toggle="aboutDropdown"
+                                class="text-center inline-flex items-center" type="button">About<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="aboutDropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault3">
+                                    <li>
+                                        <a href="../about.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="../team.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="../industry.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                                    </li>
+                                    <li>
+                                        <a href="../guiding-principles.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                            Principles</a>
+                                    </li>
+                                    <li>
+                                        <a href="../files/1101TermsandConditions.pdf"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <a href="../contact-us.html">Contact</a>
+                        </div>
+                        <div>
+                            <button class="openbtn block md:hidden" onclick="openNav()">&#9776;</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "400px";
+        document.getElementById("main").style.marginLeft = "400px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+<!-- Livewire Component wire-end:zbsxR7bBkCZ8AE7g0OD3 -->
+        <div class="flex-1 overflow-auto">
+                <style wire:id="KyM9zZ2lSW2HvD83AoXt" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;KyM9zZ2lSW2HvD83AoXt&quot;,&quot;name&quot;:&quot;cms.hero.hero-component-support&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;support\/partner-care&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;eb2c7ceb&quot;,&quot;data&quot;:{&quot;title&quot;:&quot;PartnerCare&quot;,&quot;subtitle&quot;:&quot;46% of businesses say outsourcing their IT lets them access skillsets that aren\u2019t available in-house.&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;00454dc9302db713402c7eae33cdda92c6b0dda66d3cf0015eb8f2386390ce50&quot;}}">
+    @media screen and (min-width: 987px) {
+        .home-hero {
+            background-image: url(../images/heros/home-hero-stripe.svg);
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+    }
+</style>
+
+<div>
+    <section class="home-hero flex flex-col justify-center bg-egg-white p-4">
+        <div class="px-8 mx-auto max-w-screen-xl w-full grid grid-flow-col auto-cols-fr items-center">
+            <div class="grid grid-flow-row gap-8 auto-rows-min">
+                <h2 class="font-bold text-2xl md:text-5xl leading-0">
+                    PartnerCare
+                </h2>
+
+                <p class="text-2xl">
+                    46% of businesses say outsourcing their IT lets them access skillsets that aren’t available in-house.
+                </p>
+            </div>
+
+            <div class="hidden md:block">
+                <img src="../images/heros/managed-it-hero.svg">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Livewire Component wire-end:KyM9zZ2lSW2HvD83AoXt -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+        <div>
+            <p class="text-4xl font-bold">Why do you need partner-care?</p>
+            <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+            <div>
+                <p class="pt-4">
+                    Are you getting the most out of your internal IT team or managed service provider? You want
+                    predictable and reliable support when you need it the most. Let us take the mundane, everyday tasks out
+                    of the occasion
+                    so your team can focus on developing new systems and processes.<br><br>
+                    In a world that operates primarily online, most business owners, no matter their industry, have
+                    recognised that IT is a crucial component of a modern, forward-thinking company’s corporate strategy.
+                    But in order to implement those digital strategies, is your IT department adequately supported?<br><br>
+                    Effective IT solutions don’t just save your company money. Companies that invest in cost-effective
+                    digital technologies and experiment with new, straight-forward strategies are twice as likely to report
+                    revenue growth than their competitors which plod along with the same old norms.<br><br>
+                    But if IT is not your core business, you may need to enlist the help of an expert IT company from time
+                    to time – and one who doesn’t speak in jargon at that! Partner collaboration makes the process seamless,
+                    safe and secure, with transparency and value for money at the heart of the deal.<br><br>
+                    So, are you moving forward or standing still?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div wire:id="En20CgjQ3qELIxrvXboY" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;En20CgjQ3qELIxrvXboY&quot;,&quot;name&quot;:&quot;cms.component.support-pages&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;support\/partner-care&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;7502e2aa&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;71145b07723a9bebb36977a23fcbb048b795bebd29a9bb58f1ca78f421dcd9bf&quot;}}">
+    <div class="bg-baby-blue">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div>
+                <p class="uppercase text-center font-bold text-xl pt-8 pb-8">Other Support Services</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center px-8 gap-y-12 gap-x-12">
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-bright-orange p-6 rounded-full hover:bg-white">
+                            <a href="team-care.html">
+                                <img class="h-16" src="../images/icons/support/icons8-people-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Team-Care</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-bright-yellow p-6 rounded-full hover:bg-white">
+                            <a href="easy-care.html"> <img class="h-16"
+                                src="../images/icons/support/icons8-teamwork-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Easy-Care</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-blue p-6 rounded-full hover:bg-white">
+                            <a href="partner-care.html">
+                                <img class="h-16" src="../images/icons/support/icons8-inquiry-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Partner-Care</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:En20CgjQ3qELIxrvXboY -->    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+        <div>
+            <p class="text-4xl font-bold pt-4">Features</p>
+            <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+            <div>
+                <p class="font-bold">Backup cover for staff absence or skills shortage</p>
+                <p class="pt-4">
+                    Your IT systems don’t know when staff are off, don’t have the capacity, or are unable to fix a problem.
+                    A partner collaborator is there if and when you need extra support.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Sharing is caring</p>
+                <p class="pt-4">
+                    Sometimes, only the best will do. But do you have access to most current and advanced technology and
+                    software? We invest in our team and service tools and share that expertise with our clients.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Speedy, secure and scheduled support</p>
+                <p class="pt-4">
+                    A good collaborator should be a help not a hindrance. We provide seamless support both remotely and
+                    in-person.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Productive workforce</p>
+                <p class="pt-4">
+                    By delegating us with the back-end jobs, your IT team’s time and skills can be better used elsewhere to
+                    grow the business.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Ongoing strategic consultancy</p>
+                <p class="pt-4">
+                    Following a full audit of your IT infrastructure, we can identify any areas that are underperforming or
+                    that could be streamlined in regular review meetings. The action of doing is yours.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Roadmapping</p>
+                <p class="pt-4">
+                    Digital strategies should be corporate strategies. We can help devise and manage any upcoming IT
+                    projects you may have to grow your business.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+        </div>
+
+        <div wire:id="H0qgEJxk1qIQxkblfd22" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;H0qgEJxk1qIQxkblfd22&quot;,&quot;name&quot;:&quot;cms.footer-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;support\/partner-care&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;39e9e17b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;b028c04ae7396d1b913a5145f494befb35fdc30d67a5375dcbe45b7fead6b098&quot;}}">
+    <div class="bg-dark-mid-blue w-full pt-2">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div class="grid grid-cols md:grid-cols-4 gap-4 justify-items-center">
+                <div class="text-center text-white">
+                    <img class="mx-auto h-24" src="../images/logo/1101-logo.svg" alt="">
+                    <div class="pt-4">
+                        <img class="mx-auto h-32" src="../images/random/microsoft_partner-removebg.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Essentials</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../support.html">
+                                    Support
+                                </a>
+                                <a class="" href="../security.html">
+                                    Security
+                                </a>
+                                <a class="" href="../backup/disaster-recovery.html">
+                                    Backup & Disaster Recovery
+                                </a>
+                                <a class="" href="../security/mobile-device.html">
+                                    Mobile Device Management
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Transformation</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../cloud.html">
+                                    Cloud Consultancy
+                                </a>
+                                <a class="" href="../cloud/business-intelligence.html">
+                                    Business Intelligence
+                                </a>
+                                <a class="" href="../cloud/power-platform.html">
+                                    PowerPlatform
+                                </a>
+                                <a class="" href="../cloud/sharepoint.html">
+                                    SharePoint
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Other</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../about.html">
+                                    About Us
+                                </a>
+                                <a class="" href="../team.html">
+                                    Meet The Team
+                                </a>
+                                <a class="" href="../industry.html">
+                                    Industries
+                                </a>
+                                <a class="" href="../guiding-principles.html">
+                                    Guiding Principles
+                                </a>
+                                <a class="" href="../files/1101TermsandConditions.pdf" download>
+                                    Terms And Conditions
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Get In Touch</p>
+                        <div class="text-sm">
+                            <div class="grid grid-rows gap-2">
+                                <div class="gap-2">
+                                    <p><b>Address:</b> Sum Studios, Sheffield, S23AQ</p>
+                                </div>
+                                <div class="gap-2">
+                                    <p><b>Phone:</b><a href="tel:03334441101"> 0333 444 1101</a> </p>
+
+                                </div>
+                                <div class="gap-2">
+                                    <p class="font-bold">Email: </p>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:H0qgEJxk1qIQxkblfd22 -->    </div>
+
+    <script src="../livewire/livewire6b46.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+
+<!-- Mirrored from 1101.co.uk/support/partner-care by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+</html>

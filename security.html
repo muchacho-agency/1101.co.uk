@@ -1,0 +1,677 @@
+<style>
+    .circle-with-border {
+        /* Create a circle shape using border-radius */
+        border-radius: 50%;
+
+        /* Add a border to the top half of the circle */
+        border-top: 1px solid #000;
+
+        /* Center the text inside the circle */
+        text-align: center;
+    }
+
+    .inner-circle {
+        /* Create a circle shape using border-radius */
+        border-radius: 0%;
+
+        /* Set the height and width of the circle */
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from 1101.co.uk/security by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:30:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY">
+
+    <link rel="icon" type="image/svg+xml" href="images/fav/favicon.svg">
+    <link rel="icon" type="image/png" href="images/fav/favicon.png">
+    <link rel="preload" as="style" href="build/assets/app.24cf4eb9.css" /><link rel="stylesheet" href="build/assets/app.24cf4eb9.css" />
+        <title>Security - 1101</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Digital",
+          "image": [
+            "https://1101.co.uk/images/logo/1101-logo.svg",
+            "images/heros/home-hero.svg",
+            "images/staff_images/Oz.png"
+           ],
+          "name": "1101 Digital Transformation",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sum Studios",
+            "addressLocality": "Sheffield",
+            "addressRegion": "",
+            "postalCode": "S2 3AQ",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.3613232,
+            "longitude": -1.4685612
+          },
+          "url": "https://1101.co.uk",
+          "telephone": "0333 444 1101",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          ]
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-purple">
+
+        <div class="flex flex-col">
+        <style wire:id="z7h4ONUpGjJ4nbcxHJRa" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;z7h4ONUpGjJ4nbcxHJRa&quot;,&quot;name&quot;:&quot;navigation-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;security&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;f5535db1&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;0af8db7c9164e4c0af7413d941bf21b5f8592ae785d86de4d993bd0c187be0e3&quot;}}">
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    /* The sidebar links */
+    .sidebar a {
+        /* padding: 0px 0px 0px 32px; */
+        text-decoration: none;
+        /* font-size: 25px; */
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    /* The button used to open the sidebar */
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #dbdee8;
+    }
+</style>
+
+<header>
+    <div class="py-4">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex flex-col gap-y-4 text-left text-black justify-left">
+                <div>
+                    <img src="images/logo/1101-logo.svg" class="w-32 mx-auto mb-4">
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault3" data-dropdown-toggle="dropdown3"
+                        class="pr-2" href="support.html">Digital Essentials<svg class="pr-2 ml-2 w-4 h-4"
+                            aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown3"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault3">
+                            <li>
+                                <a href="support.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                            </li>
+                            <li>
+                                <a href="security.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                            </li>
+                            <li>
+                                <a href="backup.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                    & Disaster Recovery </a>
+                            </li>
+                            <li>
+                                <a href="security/mobile-device.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                    Device Management </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault4" data-dropdown-toggle="dropdown4"
+                        class="pr-2" href="support.html">Digital Transformation<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown4"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault4">
+                            <li>
+                                <a href="cloud.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                    Consultancy</a>
+                            </li>
+                            <li>
+                                <a href="cloud/business-intelligence.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                    Intelligence</a>
+                            </li>
+                            <li>
+                                <a href="cloud/power-platform.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                    Platform</a>
+                            </li>
+                            <li>
+                                <a href="cloud/sharepoint.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefaultAbout"
+                        data-dropdown-toggle="dropdownAbout" class="pr-2" href="support.html">About<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdownAbout"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultAbout">
+                            <li>
+                                <a href="about.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="team.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                            </li>
+                            <li>
+                                <a href="industry.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                            </li>
+                            <li>
+                                <a href="guiding-principles.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                    Principles</a>
+                            </li>
+                            <li>
+                                <a href="files/1101TermsandConditions.pdf"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl hover:underline pl-4">
+                    <a class="pr-2" href="contact-us.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex justify-between pt-2">
+                <div class="flex items-center">
+                    <a href="index.html"><img class="h-24 md:h-32 p-2"
+                            src="images/logo/1101-logo.svg"></a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex flex-col items-stretch gap-y-2">
+
+                        <div
+                            class="flex flex-row justify-end text-bright-yellow text-xs font-bold hidden sm:block text-right">
+                            <a class="mr-2" href='http://remote.1101.co.uk/'>Remote Support</a>
+                            <a class="mr-2" href='https://1101.myportallogin.co.uk/'>Support Portal</a>
+                            <a class="mr-2" href='https://app.eu.myglue.com/'>Knowledgebase</a>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <div class="font-bold text-xs hidden sm:block">
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='images/icons/navigation/icons8-phone-50.png'>
+                                    <a href="tel:03334441101">0333 444 1101</a>
+                                </div>
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='images/icons/navigation/icons8-mail-50.png'>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-x-2 md:gap-x-4 text-sm font-medium hidden sm:block">
+                            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                                class="text-center inline-flex items-center" type="button">Digital Essentials<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault">
+                                    <li>
+                                        <a href="support.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="security.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                                    </li>
+                                    <li>
+                                        <a href="backup.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                            & Disaster Recovery </a>
+                                    </li>
+                                    <li>
+                                        <a href="security/mobile-device.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                            Device Management </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button id="dropdownDefault2" data-dropdown-toggle="dropdown2"
+                                class="text-center inline-flex items-center" type="button">Digital Transformation<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown2"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault2">
+                                    <li>
+                                        <a href="cloud.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                            Consultancy</a>
+                                    </li>
+                                    <li>
+                                        <a href="cloud/business-intelligence.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                            Intelligence</a>
+                                    </li>
+                                    <li>
+                                        <a href="cloud/power-platform.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                            Platform</a>
+                                    </li>
+                                    <li>
+                                        <a href="cloud/sharepoint.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="dropdownDefault3" data-dropdown-toggle="aboutDropdown"
+                                class="text-center inline-flex items-center" type="button">About<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="aboutDropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault3">
+                                    <li>
+                                        <a href="about.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="team.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="industry.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                                    </li>
+                                    <li>
+                                        <a href="guiding-principles.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                            Principles</a>
+                                    </li>
+                                    <li>
+                                        <a href="files/1101TermsandConditions.pdf"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <a href="contact-us.html">Contact</a>
+                        </div>
+                        <div>
+                            <button class="openbtn block md:hidden" onclick="openNav()">&#9776;</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "400px";
+        document.getElementById("main").style.marginLeft = "400px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+<!-- Livewire Component wire-end:z7h4ONUpGjJ4nbcxHJRa -->
+        <div class="flex-1 overflow-auto">
+                <style wire:id="0HIZBPtixwIXihyQVUUe" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;0HIZBPtixwIXihyQVUUe&quot;,&quot;name&quot;:&quot;cms.hero.hero-component-security&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;security&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;321aa625&quot;,&quot;data&quot;:{&quot;title&quot;:&quot;Security Services&quot;,&quot;subtitle&quot;:&quot;43% of cyber-attacks target small businesses&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;1245a687b8f6168aa6ddf4a8165110314520b71c78ae057e372564cfd0e7a674&quot;}}">
+    @media screen and (min-width: 987px) {
+        .home-hero {
+            background-image: url(images/heros/home-hero-stripe.svg);
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+    }
+</style>
+
+<div>
+    <section class="home-hero flex flex-col justify-center bg-egg-white p-4">
+        <div class="px-8 mx-auto max-w-screen-xl w-full grid grid-flow-col auto-cols-fr items-center">
+            <div class="grid grid-flow-row gap-8 auto-rows-min">
+                <h2 class="font-bold text-2xl md:text-5xl leading-0">
+                    Security Services
+                </h2>
+
+                <p class="text-2xl">
+                    43% of cyber-attacks target small businesses
+                </p>
+            </div>
+
+            <div class="hidden md:block">
+                <img src="images/heros/security-hero.svg">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Livewire Component wire-end:0HIZBPtixwIXihyQVUUe -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+        <div>
+            <p class="text-4xl font-bold">Why do you need security?</p>
+            <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+            <div>
+                <p class="pt-4">
+                    Around 1.5million people are victims of cyber attacks each day. That’s about 18 every second. So,
+                    it’s no wonder half of all SMEs have already experienced a breach of cyber security, with figures only
+                    set to rise.<br><br>
+                    Data is one of the most valuable assets in a tech-driven world, and hackers and organised online crime
+                    rings continue to develop sophisticated ways to steal a company’s data for monetary gain.<br><br>
+                    But can your business really afford to take a financial or reputational hit from an invisible threat by
+                    not having adequate frontline defences? Chances are, the cost of downtime, relocating resources, data
+                    loss and compliance breach fines will far outweigh the cost of preventative measures.<br><br>
+                    This area of IT management is broad and complex, but there are various tools that businesses can
+                    implement that work independently or cohesively to ensure maximum level of cyber security.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div wire:id="wfcbUJDA8PdQe73nK0q5" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;wfcbUJDA8PdQe73nK0q5&quot;,&quot;name&quot;:&quot;cms.component.security-pages&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;security&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;c69f5a42&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;0c3702df66e28d8fe27645f2fdeb7a2a52a242984f3eb88d2472ef16f529a9be&quot;}}">
+    <div class="bg-baby-blue">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div>
+                <p class="uppercase text-center font-bold text-xl pt-8 pb-8">Other Security Services</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center px-8 gap-y-12 gap-x-12">
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-bright-orange p-6 rounded-full hover:bg-white inline-grid">
+                            <a href="security/endpoint.html">
+                                <img class="h-16"  src="images/icons/security/icons8-laptop-alert-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Endpoint Security</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-bright-yellow p-6 rounded-full hover:bg-white inline-grid">
+                            <a href="security/endpoint-encryption.html"> <img class="h-16"
+                                src="images/icons/security/icons8-data-encryption-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Endpoint Encryption</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-blue p-6 rounded-full hover:bg-white inline-grid">
+                            <a href="security/email.html">
+                                <img class="h-16" src="images/icons/security/icons8-secure-mail-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Email Security</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-blue p-6 rounded-full hover:bg-white inline-grid">
+                            <a href="security/network.html">
+                                <img class="h-16" src="images/icons/security/icons8-security-lock-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Network Security</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-pascal-pink p-6 rounded-full hover:bg-white inline-grid">
+                            <a href="security/mobile-device.html">
+                                <img class="h-16" src="images/icons/security/icons8-multiple-devices-100.png" />
+                            </a>
+                        </div>
+                        <p class="font-medium">Mobile Device Management</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:wfcbUJDA8PdQe73nK0q5 -->
+
+        </div>
+
+        <div wire:id="EHZNIpMRh42XMSOgTw6l" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;EHZNIpMRh42XMSOgTw6l&quot;,&quot;name&quot;:&quot;cms.footer-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;security&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;39e9e17b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;0904f34de6daa6874bebfd295bfcae0a54799157e89e011f9b01cc0c64233b05&quot;}}">
+    <div class="bg-dark-mid-blue w-full pt-2">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div class="grid grid-cols md:grid-cols-4 gap-4 justify-items-center">
+                <div class="text-center text-white">
+                    <img class="mx-auto h-24" src="images/logo/1101-logo.svg" alt="">
+                    <div class="pt-4">
+                        <img class="mx-auto h-32" src="images/random/microsoft_partner-removebg.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Essentials</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="support.html">
+                                    Support
+                                </a>
+                                <a class="" href="security.html">
+                                    Security
+                                </a>
+                                <a class="" href="backup/disaster-recovery.html">
+                                    Backup & Disaster Recovery
+                                </a>
+                                <a class="" href="security/mobile-device.html">
+                                    Mobile Device Management
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Transformation</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="cloud.html">
+                                    Cloud Consultancy
+                                </a>
+                                <a class="" href="cloud/business-intelligence.html">
+                                    Business Intelligence
+                                </a>
+                                <a class="" href="cloud/power-platform.html">
+                                    PowerPlatform
+                                </a>
+                                <a class="" href="cloud/sharepoint.html">
+                                    SharePoint
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Other</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="about.html">
+                                    About Us
+                                </a>
+                                <a class="" href="team.html">
+                                    Meet The Team
+                                </a>
+                                <a class="" href="industry.html">
+                                    Industries
+                                </a>
+                                <a class="" href="guiding-principles.html">
+                                    Guiding Principles
+                                </a>
+                                <a class="" href="files/1101TermsandConditions.pdf" download>
+                                    Terms And Conditions
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Get In Touch</p>
+                        <div class="text-sm">
+                            <div class="grid grid-rows gap-2">
+                                <div class="gap-2">
+                                    <p><b>Address:</b> Sum Studios, Sheffield, S23AQ</p>
+                                </div>
+                                <div class="gap-2">
+                                    <p><b>Phone:</b><a href="tel:03334441101"> 0333 444 1101</a> </p>
+
+                                </div>
+                                <div class="gap-2">
+                                    <p class="font-bold">Email: </p>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:EHZNIpMRh42XMSOgTw6l -->    </div>
+
+    <script src="livewire/livewire6b46.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+
+<!-- Mirrored from 1101.co.uk/security by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:30:41 GMT -->
+</html>

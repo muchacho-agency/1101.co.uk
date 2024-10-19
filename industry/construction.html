@@ -1,0 +1,751 @@
+<style>
+    .circle-with-border {
+        /* Create a circle shape using border-radius */
+        border-radius: 50%;
+
+        /* Add a border to the top half of the circle */
+        border-top: 1px solid #000;
+
+        /* Center the text inside the circle */
+        text-align: center;
+    }
+
+    .inner-circle {
+        /* Create a circle shape using border-radius */
+        border-radius: 0%;
+
+        /* Set the height and width of the circle */
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from 1101.co.uk/industry/construction by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY">
+
+    <link rel="icon" type="image/svg+xml" href="../images/fav/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/fav/favicon.png">
+    <link rel="preload" as="style" href="../build/assets/app.24cf4eb9.css" /><link rel="stylesheet" href="../build/assets/app.24cf4eb9.css" />
+        <title>Construction - 1101</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Digital",
+          "image": [
+            "https://1101.co.uk/images/logo/1101-logo.svg",
+            "../images/heros/home-hero.svg",
+            "../images/staff_images/Oz.png"
+           ],
+          "name": "1101 Digital Transformation",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sum Studios",
+            "addressLocality": "Sheffield",
+            "addressRegion": "",
+            "postalCode": "S2 3AQ",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.3613232,
+            "longitude": -1.4685612
+          },
+          "url": "https://1101.co.uk",
+          "telephone": "0333 444 1101",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          ]
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-purple">
+
+        <div class="flex flex-col">
+        <style wire:id="8K4crD0nhRnMl0gBfxHL" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;8K4crD0nhRnMl0gBfxHL&quot;,&quot;name&quot;:&quot;navigation-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/construction&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;f5535db1&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;2563767fde23eda5b1236cd47f64060bff900056ffe37114037142bb80d97fcc&quot;}}">
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    /* The sidebar links */
+    .sidebar a {
+        /* padding: 0px 0px 0px 32px; */
+        text-decoration: none;
+        /* font-size: 25px; */
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    /* The button used to open the sidebar */
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #dbdee8;
+    }
+</style>
+
+<header>
+    <div class="py-4">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex flex-col gap-y-4 text-left text-black justify-left">
+                <div>
+                    <img src="../images/logo/1101-logo.svg" class="w-32 mx-auto mb-4">
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault3" data-dropdown-toggle="dropdown3"
+                        class="pr-2" href="../support.html">Digital Essentials<svg class="pr-2 ml-2 w-4 h-4"
+                            aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown3"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault3">
+                            <li>
+                                <a href="../support.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                            </li>
+                            <li>
+                                <a href="../security.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                            </li>
+                            <li>
+                                <a href="../backup.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                    & Disaster Recovery </a>
+                            </li>
+                            <li>
+                                <a href="../security/mobile-device.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                    Device Management </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault4" data-dropdown-toggle="dropdown4"
+                        class="pr-2" href="../support.html">Digital Transformation<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown4"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault4">
+                            <li>
+                                <a href="../cloud.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                    Consultancy</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/business-intelligence.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                    Intelligence</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/power-platform.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                    Platform</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/sharepoint.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefaultAbout"
+                        data-dropdown-toggle="dropdownAbout" class="pr-2" href="../support.html">About<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdownAbout"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultAbout">
+                            <li>
+                                <a href="../about.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="../team.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                            </li>
+                            <li>
+                                <a href="../industry.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                            </li>
+                            <li>
+                                <a href="../guiding-principles.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                    Principles</a>
+                            </li>
+                            <li>
+                                <a href="../files/1101TermsandConditions.pdf"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl hover:underline pl-4">
+                    <a class="pr-2" href="../contact-us.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex justify-between pt-2">
+                <div class="flex items-center">
+                    <a href="../index.html"><img class="h-24 md:h-32 p-2"
+                            src="../images/logo/1101-logo.svg"></a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex flex-col items-stretch gap-y-2">
+
+                        <div
+                            class="flex flex-row justify-end text-bright-yellow text-xs font-bold hidden sm:block text-right">
+                            <a class="mr-2" href='http://remote.1101.co.uk/'>Remote Support</a>
+                            <a class="mr-2" href='https://1101.myportallogin.co.uk/'>Support Portal</a>
+                            <a class="mr-2" href='https://app.eu.myglue.com/'>Knowledgebase</a>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <div class="font-bold text-xs hidden sm:block">
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-phone-50.png'>
+                                    <a href="tel:03334441101">0333 444 1101</a>
+                                </div>
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-mail-50.png'>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-x-2 md:gap-x-4 text-sm font-medium hidden sm:block">
+                            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                                class="text-center inline-flex items-center" type="button">Digital Essentials<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault">
+                                    <li>
+                                        <a href="../support.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="../security.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                                    </li>
+                                    <li>
+                                        <a href="../backup.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                            & Disaster Recovery </a>
+                                    </li>
+                                    <li>
+                                        <a href="../security/mobile-device.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                            Device Management </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button id="dropdownDefault2" data-dropdown-toggle="dropdown2"
+                                class="text-center inline-flex items-center" type="button">Digital Transformation<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown2"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault2">
+                                    <li>
+                                        <a href="../cloud.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                            Consultancy</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/business-intelligence.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                            Intelligence</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/power-platform.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                            Platform</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/sharepoint.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="dropdownDefault3" data-dropdown-toggle="aboutDropdown"
+                                class="text-center inline-flex items-center" type="button">About<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="aboutDropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault3">
+                                    <li>
+                                        <a href="../about.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="../team.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="../industry.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                                    </li>
+                                    <li>
+                                        <a href="../guiding-principles.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                            Principles</a>
+                                    </li>
+                                    <li>
+                                        <a href="../files/1101TermsandConditions.pdf"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <a href="../contact-us.html">Contact</a>
+                        </div>
+                        <div>
+                            <button class="openbtn block md:hidden" onclick="openNav()">&#9776;</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "400px";
+        document.getElementById("main").style.marginLeft = "400px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+<!-- Livewire Component wire-end:8K4crD0nhRnMl0gBfxHL -->
+        <div class="flex-1 overflow-auto">
+                <style wire:id="C8r7I5N4uZ5KR9iBTNxl" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;C8r7I5N4uZ5KR9iBTNxl&quot;,&quot;name&quot;:&quot;cms.hero.hero-component-industry&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/construction&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;346d8b5e&quot;,&quot;data&quot;:{&quot;title&quot;:&quot;Construction&quot;,&quot;subtitle&quot;:&quot;Save up to 80 field and admin hours per month per employee with the right systems!&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;5ba3abb5763921c0387d3211ada636407060325489e9a88d14f56ee75977d667&quot;}}">
+    @media screen and (min-width: 987px) {
+        .home-hero {
+            background-image: url(../images/heros/home-hero-stripe.svg);
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+    }
+</style>
+
+<div>
+    <section class="home-hero flex flex-col justify-center bg-egg-white p-4">
+        <div class="px-8 mx-auto max-w-screen-xl w-full grid grid-flow-col auto-cols-fr items-center">
+            <div class="grid grid-flow-row gap-8 auto-rows-min">
+                <h2 class="font-bold text-2xl md:text-5xl leading-0">
+                    Construction
+                </h2>
+
+                <p class="text-2xl">
+                    Save up to 80 field and admin hours per month per employee with the right systems!
+                </p>
+            </div>
+
+            <div class="hidden md:block">
+                <img src="../images/heros/cloud-consultancy-hero.svg">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Livewire Component wire-end:C8r7I5N4uZ5KR9iBTNxl -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+        <div>
+            <p class="text-4xl font-bold">Not For Profit Industry</p>
+            <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+            <div>
+                <p class="pt-4">
+                    Technology is rapidly reshaping the construction industry. No longer can pen and paper be relied upon to
+                    track supply or progress. Computer programs now interconnect the industry like never before,
+                    streamlining communication and efficiency.<br><br>
+                    The construction industry has been seen as slow in its digital adoption, with pencil drawings and
+                    clipboards commonly seen across building sites. Lack of training and a skills shortage, along with
+                    workers reluctance to fully embrace technology has allowed this to happen, but to ensure maximum
+                    productivity construction business must move forward and embrace the digital age.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div wire:id="xzreGStZA4fc1TIB2REA" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;xzreGStZA4fc1TIB2REA&quot;,&quot;name&quot;:&quot;cms.component.our-services&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/construction&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;cf3a2d3b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;4f82c07be1fb026e3b1be94eae84deef8a55640b7aa21ae8b02b6f6f40ec3c78&quot;}}">
+    <div class="bg-baby-blue">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div>
+                <p class="uppercase text-center font-bold text-xl pt-8 pb-8">Our Services</p>
+            </div>
+            <div class="grid grid-rows-7 sm:grid-cols-7 justify-center px-8 gap-y-12 gap-x-12">
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-yellow p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../support.html">
+                                <img class="" src="../images/icons/support/icons8-people-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Support</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-pink p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../security.html"> <img class=""
+                                src="../images/icons/security/icons8-security-lock-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Security</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-teal p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../backup.html">
+                                <img class="" src="../images/icons/backup/icons8-restore-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Backup & Disaster Recovery</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-pale-blue p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud.html">
+                                <img class="" src="../images/icons/cloud/icons8-cloud-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Cloud Consultancy</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-very-pale-blue p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/power-platform.html">
+                                <img class="" src="../images/icons/cloud/icons8-power-bi-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">PowerPlatform</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-silver p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/sharepoint.html">
+                                <img class="" src="../images/icons/cloud/icons8-microsoft-sharepoint-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">SharePoint</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-lilac p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/business-intelligence.html">
+                                <img class="" src="../images/icons/cloud/icons8-power-bi-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Business Intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:xzreGStZA4fc1TIB2REA -->    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+        <div>
+            <p class="text-4xl font-bold pt-4">Features</p>
+            <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+            <div>
+                <p class="font-bold">Adapt to change quicker and become more agile with managed IT support</p>
+                <p class="pt-4">
+                    Future-proofing your company has never been easier by outsourcing your IT needs to a leader of digital
+                    transformation like 1101. Our tech experts will ensure your software, programs and AI are kept up to
+                    date.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Reduce downtime and increase productivity</p>
+                <p class="pt-4">
+                    Do your current IT systems serve you well or let you down? Through a combination of managed IT and
+                    digital transformation, we can help you get your separate systems to talk to each other and ensure all
+                    your critical service functions are monitored. This aims to reduce your system and end-user downtime as
+                    well as ensuring we minimise time consuming manual administration functions.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Protect your data, protect your business integrity with endpoint security</p>
+                <p class="pt-4">
+                    As the digital world continues to grow cybersecurity risks have increased too, this is increasingly an
+                    issue for businesses who previously worked solely on-site. Simple steps can be taken to reduce the
+                    threat window and ensure an IP and environment is protected by deploying a centrally managed anti-virus,
+                    malware, firewall and email filtering policy to end-users.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Keep your business running by having adequate backup and disaster recovery plans</p>
+                <p class="pt-4">
+                    In the same vein as protecting your business from cyber threats, backup and disaster recovery should be
+                    part of your overall business security and continuity plan. A lot of businesses run on the “it’s never
+                    happened to us” mentality. However, what if you did lose access to your systems? What would the impact
+                    look like? And how long could you be without access to your critical systems including phonelines,
+                    email, applications or files?
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <p class="font-bold">Upskill the workforce and reduce human errors with ongoing system development and
+                    training</p>
+                <p class="pt-4">
+                    Has the increasing use in technology opened up a skills gap in your workforce? Our partners can choose
+                    to work with our consultants who are industry specialists to look at ongoing improvement programs linked
+                    in with training and development of staff and champions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+        </div>
+
+        <div wire:id="i0aMhFJZfAAPu0SxJIKS" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;i0aMhFJZfAAPu0SxJIKS&quot;,&quot;name&quot;:&quot;cms.footer-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/construction&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;39e9e17b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;ccfacd77ac6c4a8497e8ad12911352927648bb0ce422d7da054668d1af2ef719&quot;}}">
+    <div class="bg-dark-mid-blue w-full pt-2">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div class="grid grid-cols md:grid-cols-4 gap-4 justify-items-center">
+                <div class="text-center text-white">
+                    <img class="mx-auto h-24" src="../images/logo/1101-logo.svg" alt="">
+                    <div class="pt-4">
+                        <img class="mx-auto h-32" src="../images/random/microsoft_partner-removebg.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Essentials</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../support.html">
+                                    Support
+                                </a>
+                                <a class="" href="../security.html">
+                                    Security
+                                </a>
+                                <a class="" href="../backup/disaster-recovery.html">
+                                    Backup & Disaster Recovery
+                                </a>
+                                <a class="" href="../security/mobile-device.html">
+                                    Mobile Device Management
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Transformation</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../cloud.html">
+                                    Cloud Consultancy
+                                </a>
+                                <a class="" href="../cloud/business-intelligence.html">
+                                    Business Intelligence
+                                </a>
+                                <a class="" href="../cloud/power-platform.html">
+                                    PowerPlatform
+                                </a>
+                                <a class="" href="../cloud/sharepoint.html">
+                                    SharePoint
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Other</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../about.html">
+                                    About Us
+                                </a>
+                                <a class="" href="../team.html">
+                                    Meet The Team
+                                </a>
+                                <a class="" href="../industry.html">
+                                    Industries
+                                </a>
+                                <a class="" href="../guiding-principles.html">
+                                    Guiding Principles
+                                </a>
+                                <a class="" href="../files/1101TermsandConditions.pdf" download>
+                                    Terms And Conditions
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Get In Touch</p>
+                        <div class="text-sm">
+                            <div class="grid grid-rows gap-2">
+                                <div class="gap-2">
+                                    <p><b>Address:</b> Sum Studios, Sheffield, S23AQ</p>
+                                </div>
+                                <div class="gap-2">
+                                    <p><b>Phone:</b><a href="tel:03334441101"> 0333 444 1101</a> </p>
+
+                                </div>
+                                <div class="gap-2">
+                                    <p class="font-bold">Email: </p>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:i0aMhFJZfAAPu0SxJIKS -->    </div>
+
+    <script src="../livewire/livewire6b46.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+
+<!-- Mirrored from 1101.co.uk/industry/construction by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+</html>

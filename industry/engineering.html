@@ -1,0 +1,784 @@
+<style>
+    .circle-with-border {
+        /* Create a circle shape using border-radius */
+        border-radius: 50%;
+
+        /* Add a border to the top half of the circle */
+        border-top: 1px solid #000;
+
+        /* Center the text inside the circle */
+        text-align: center;
+    }
+
+    .inner-circle {
+        /* Create a circle shape using border-radius */
+        border-radius: 0%;
+
+        /* Set the height and width of the circle */
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from 1101.co.uk/industry/engineering by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY">
+
+    <link rel="icon" type="image/svg+xml" href="../images/fav/favicon.svg">
+    <link rel="icon" type="image/png" href="../images/fav/favicon.png">
+    <link rel="preload" as="style" href="../build/assets/app.24cf4eb9.css" /><link rel="stylesheet" href="../build/assets/app.24cf4eb9.css" />
+        <title>Engineering - 1101</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Digital",
+          "image": [
+            "https://1101.co.uk/images/logo/1101-logo.svg",
+            "../images/heros/home-hero.svg",
+            "../images/staff_images/Oz.png"
+           ],
+          "name": "1101 Digital Transformation",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sum Studios",
+            "addressLocality": "Sheffield",
+            "addressRegion": "",
+            "postalCode": "S2 3AQ",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.3613232,
+            "longitude": -1.4685612
+          },
+          "url": "https://1101.co.uk",
+          "telephone": "0333 444 1101",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          ]
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-purple">
+
+        <div class="flex flex-col">
+        <style wire:id="vhziL2XbVGMJP8xL379d" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;vhziL2XbVGMJP8xL379d&quot;,&quot;name&quot;:&quot;navigation-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/engineering&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;f5535db1&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;f1be7f9ad9eaa1672e73eb7a394cb818d47a47b57f41fc93c9ec31514b747b2a&quot;}}">
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    /* The sidebar links */
+    .sidebar a {
+        /* padding: 0px 0px 0px 32px; */
+        text-decoration: none;
+        /* font-size: 25px; */
+        display: block;
+        transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    /* The button used to open the sidebar */
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #dbdee8;
+    }
+</style>
+
+<header>
+    <div class="py-4">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="flex flex-col gap-y-4 text-left text-black justify-left">
+                <div>
+                    <img src="../images/logo/1101-logo.svg" class="w-32 mx-auto mb-4">
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault3" data-dropdown-toggle="dropdown3"
+                        class="pr-2" href="../support.html">Digital Essentials<svg class="pr-2 ml-2 w-4 h-4"
+                            aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown3"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault3">
+                            <li>
+                                <a href="../support.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                            </li>
+                            <li>
+                                <a href="../security.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                            </li>
+                            <li>
+                                <a href="../backup.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                    & Disaster Recovery </a>
+                            </li>
+                            <li>
+                                <a href="../security/mobile-device.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                    Device Management </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefault4" data-dropdown-toggle="dropdown4"
+                        class="pr-2" href="../support.html">Digital Transformation<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown4"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault4">
+                            <li>
+                                <a href="../cloud.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                    Consultancy</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/business-intelligence.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                    Intelligence</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/power-platform.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                    Platform</a>
+                            </li>
+                            <li>
+                                <a href="../cloud/sharepoint.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl pl-4">
+                    <button class="flex inline-flex items-center" id="dropdownDefaultAbout"
+                        data-dropdown-toggle="dropdownAbout" class="pr-2" href="../support.html">About<svg
+                            class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdownAbout"
+                        class="hidden z-10 w-11/12 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                        <ul class="py-1 text-lg text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultAbout">
+                            <li>
+                                <a href="../about.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="../team.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                            </li>
+                            <li>
+                                <a href="../industry.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                            </li>
+                            <li>
+                                <a href="../guiding-principles.html"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                    Principles</a>
+                            </li>
+                            <li>
+                                <a href="../files/1101TermsandConditions.pdf"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="font-bold text-2xl hover:underline pl-4">
+                    <a class="pr-2" href="../contact-us.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex justify-between pt-2">
+                <div class="flex items-center">
+                    <a href="../index.html"><img class="h-24 md:h-32 p-2"
+                            src="../images/logo/1101-logo.svg"></a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex flex-col items-stretch gap-y-2">
+
+                        <div
+                            class="flex flex-row justify-end text-bright-yellow text-xs font-bold hidden sm:block text-right">
+                            <a class="mr-2" href='http://remote.1101.co.uk/'>Remote Support</a>
+                            <a class="mr-2" href='https://1101.myportallogin.co.uk/'>Support Portal</a>
+                            <a class="mr-2" href='https://app.eu.myglue.com/'>Knowledgebase</a>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <div class="font-bold text-xs hidden sm:block">
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-phone-50.png'>
+                                    <a href="tel:03334441101">0333 444 1101</a>
+                                </div>
+                                <div class="flex flex-row items-center">
+                                    <img class="w-8"
+                                        src='../images/icons/navigation/icons8-mail-50.png'>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-x-2 md:gap-x-4 text-sm font-medium hidden sm:block">
+                            <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                                class="text-center inline-flex items-center" type="button">Digital Essentials<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault">
+                                    <li>
+                                        <a href="../support.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="../security.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                                    </li>
+                                    <li>
+                                        <a href="../backup.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Backup
+                                            & Disaster Recovery </a>
+                                    </li>
+                                    <li>
+                                        <a href="../security/mobile-device.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobile
+                                            Device Management </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button id="dropdownDefault2" data-dropdown-toggle="dropdown2"
+                                class="text-center inline-flex items-center" type="button">Digital Transformation<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown2"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault2">
+                                    <li>
+                                        <a href="../cloud.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud
+                                            Consultancy</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/business-intelligence.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business
+                                            Intelligence</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/power-platform.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Power
+                                            Platform</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cloud/sharepoint.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SharePoint</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="dropdownDefault3" data-dropdown-toggle="aboutDropdown"
+                                class="text-center inline-flex items-center" type="button">About<svg
+                                    class="pr-2 ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="aboutDropdown"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownDefault3">
+                                    <li>
+                                        <a href="../about.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="../team.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Meet the Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="../industry.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industries</a>
+                                    </li>
+                                    <li>
+                                        <a href="../guiding-principles.html"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Guiding
+                                            Principles</a>
+                                    </li>
+                                    <li>
+                                        <a href="../files/1101TermsandConditions.pdf"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" download>Terms And Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <a href="../contact-us.html">Contact</a>
+                        </div>
+                        <div>
+                            <button class="openbtn block md:hidden" onclick="openNav()">&#9776;</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "400px";
+        document.getElementById("main").style.marginLeft = "400px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+<!-- Livewire Component wire-end:vhziL2XbVGMJP8xL379d -->
+        <div class="flex-1 overflow-auto">
+            <style wire:id="Y5P14319A6AnalxHOJlz" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;Y5P14319A6AnalxHOJlz&quot;,&quot;name&quot;:&quot;cms.hero.hero-component-industry&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/engineering&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;24844d89&quot;,&quot;data&quot;:{&quot;title&quot;:&quot;Engineering&quot;,&quot;subtitle&quot;:&quot;Rapid technological change is overhauling traditional processes across all industries. But with\nengineering in particular, technology adoption and innovation has become the strategic core of business models, driven\nby the greater need for productivity, operational performance and financial security. &quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;db733c1d4faf5f9e2b93ed4c6fc60e650edf0124b8ef5f2b6837416e422754cf&quot;}}">
+    @media screen and (min-width: 987px) {
+        .home-hero {
+            background-image: url(../images/heros/home-hero-stripe.svg);
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+    }
+</style>
+
+<div>
+    <section class="home-hero flex flex-col justify-center bg-egg-white p-4">
+        <div class="px-8 mx-auto max-w-screen-xl w-full grid grid-flow-col auto-cols-fr items-center">
+            <div class="grid grid-flow-row gap-8 auto-rows-min">
+                <h2 class="font-bold text-2xl md:text-5xl leading-0">
+                    Engineering
+                </h2>
+
+                <p class="text-2xl">
+                    Rapid technological change is overhauling traditional processes across all industries. But with
+engineering in particular, technology adoption and innovation has become the strategic core of business models, driven
+by the greater need for productivity, operational performance and financial security. 
+                </p>
+            </div>
+
+            <div class="hidden md:block">
+                <img src="../images/heros/cloud-consultancy-hero.svg">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Livewire Component wire-end:Y5P14319A6AnalxHOJlz -->
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+    <div>
+        <p class="text-4xl font-bold">Engineering Industry</p>
+        <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+        <div>
+            <p class="pt-4">
+                But digital transformation for engineering companies doesn’t just happen at the press of a button. As
+                workforce shortages drive businesses to reduce human involvement, automation becomes a major challenge.
+                Different technology concepts all being applied simultaneously makes the situation even harder to
+                master. And it drives up costs, especially in research and development.<br><br>
+                If the switch from conventional to digital technologies is keeping you up all night, you may be looking
+                for a little helping hand to overcome any challenges your engineering firm is facing. 1101 4 Service has
+                vast experience supporting the engineering industry with their IT and digital transformation needs.
+
+            </p>
+        </div>
+    </div>
+</div>
+<div wire:id="NILOV8VgJUbNdqcbfGgC" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;NILOV8VgJUbNdqcbfGgC&quot;,&quot;name&quot;:&quot;cms.component.our-services&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/engineering&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;cf3a2d3b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;64da85e0966f486dfd8222508437235ebdfd9e25c604688d7c64d3b3e3382053&quot;}}">
+    <div class="bg-baby-blue">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div>
+                <p class="uppercase text-center font-bold text-xl pt-8 pb-8">Our Services</p>
+            </div>
+            <div class="grid grid-rows-7 sm:grid-cols-7 justify-center px-8 gap-y-12 gap-x-12">
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-yellow p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../support.html">
+                                <img class="" src="../images/icons/support/icons8-people-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Support</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-pink p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../security.html"> <img class=""
+                                src="../images/icons/security/icons8-security-lock-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Security</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-teal p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../backup.html">
+                                <img class="" src="../images/icons/backup/icons8-restore-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Backup & Disaster Recovery</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-pale-blue p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud.html">
+                                <img class="" src="../images/icons/cloud/icons8-cloud-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Cloud Consultancy</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-very-pale-blue p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/power-platform.html">
+                                <img class="" src="../images/icons/cloud/icons8-power-bi-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">PowerPlatform</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-light-silver p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/sharepoint.html">
+                                <img class="" src="../images/icons/cloud/icons8-microsoft-sharepoint-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">SharePoint</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="text-center">
+                        <div class="bg-lilac p-6 rounded-full hover:bg-light-blue inline-grid">
+                            <a href="../cloud/business-intelligence.html">
+                                <img class="" src="../images/icons/cloud/icons8-power-bi-50.png" />
+                            </a>
+                        </div>
+                        <p class="font-bold text-sm pt-2">Business Intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:NILOV8VgJUbNdqcbfGgC --><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+    <div>
+        <p class="text-4xl font-bold pt-4">Features</p>
+        <hr class="my-4 h-px bg-gray-100 border-0 dark:bg-gray-200">
+
+        <div>
+            <p class="font-bold">Delegate maintenance tasks to keep systems up to date</p>
+            <p class="pt-4">
+                Replacing traditional mechanics in engineering with modern technologies often results from changes in
+                user behaviour and expectations. But the integration of software in mechanical components is also a
+                commercial consideration. Algorithms are needed to reduce wear and tear and keep total costs down, but
+                does your workforce have the knowledge, time and resources to keep these updated? Managed IT support is
+                there for engineering firms to outsource any laborious IT tasks.
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Automation is the blueprint to free up employees to upskill in other areas </p>
+            <p class="pt-4">
+                Have your engineers become chained to the rising and repetitive administrative tasks associated with
+                their roles? Manually inputting, transferring and updating data should be a thing of the past. Digital
+                transformation empowers companies to use a diverse range of automated admin and analytic tools, such as
+                BIM and PIM, helping your skilled and trained engineers get back to work that adds value in
+                construction, design or testing
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Consolidate platforms and processes to ensure business continuity </p>
+            <p class="pt-4">
+                Rapid onboarding during the pandemic may have led to a more complex digital ecosystem. But if these new
+                systems, processes and resources were hastily designed and implemented, you may be finding ongoing
+                development and management costs are rising. Some systems may even be failing as data is duplicated. A
+                digital transformation specialist like 1101 4 Service can audit your existing systems and look at any
+                challenges you may be facing, providing options for where advancements can be made to ensure the smooth
+                flow of data.
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Protect your business integrity in a data-led industry with a solid back-up and DR plan
+            </p>
+            <p class="pt-4">
+                As a cornerstone of the global economy, engineering has always evolved at a fast pace. But as technology
+                allows engineers to become more collaborative and innovative, they also have an increased access to data
+                that affects everything from research and development to predictive analysis. So, how do you manage and
+                protect that data? And what would happen if you were to lose it all? It’s more important than ever that
+                engineering businesses have adequate data backup and disaster recovery in place to prevent data loss and
+                ensure sustainable growth.
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Take a proactive approach to cybersecurity with cloud services</p>
+            <p class="pt-4">
+                Due to the nature of their work, which can encompass global travel, engineers have effectively and
+                efficiently utilised cloud computing. They can now store all their digital designs, 3D models, and data
+                capture in one place. But what about cloud-based security? Keep your environment safe and data secure by
+                centralising identity and access management through single sign on (SSO) and multi-factor authorisation
+                which protect your users from 99.9 percent of cybersecurity attacks.
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Use digital transformation to reach sustainability goals</p>
+            <p class="pt-4">
+                Engineers need to focus on building sustainable structures that will have a positive effect on the
+                environment as they play their part in tackling the climate crisis. Digital transformation and
+                technology are invaluable tools to enable a more sustainable future by providing your engineers with the
+                ability to see where emissions can be reduced via energy efficiency and usage.
+            </p>
+        </div>
+
+        <div class="pt-4">
+            <p class="font-bold">Create a culture of innovation by leading from the top</p>
+            <p class="pt-4">
+                At every engineering firm there will be those who are enthusiastic about innovation, while others are
+                resistant to change. Many leaders have identified threats, challenges and opportunities related to
+                digital transformation, but perhaps pressures of costs, skills gaps and workforce apprehension make it
+                difficult to implement. In turn, this can fail to attract digitally savvy talent. It’s a catch-22
+                situation and can cause businesses to become stagnate. Our GAIN20 programme will give leaders the
+                awareness and confidence needed bite the bullet and set measurable strategic goals enabled by digital
+                transformation.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+
+        <div wire:id="wSRIeei0ItT84ZPyG9kP" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;wSRIeei0ItT84ZPyG9kP&quot;,&quot;name&quot;:&quot;cms.footer-component&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;industry\/engineering&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;39e9e17b&quot;,&quot;data&quot;:[],&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;58ebd2a42dc032c29f8e17cda1132c17996002876f6bd3863a31f1772e1f5333&quot;}}">
+    <div class="bg-dark-mid-blue w-full pt-2">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 pb-12">
+            <div class="grid grid-cols md:grid-cols-4 gap-4 justify-items-center">
+                <div class="text-center text-white">
+                    <img class="mx-auto h-24" src="../images/logo/1101-logo.svg" alt="">
+                    <div class="pt-4">
+                        <img class="mx-auto h-32" src="../images/random/microsoft_partner-removebg.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Essentials</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../support.html">
+                                    Support
+                                </a>
+                                <a class="" href="../security.html">
+                                    Security
+                                </a>
+                                <a class="" href="../backup/disaster-recovery.html">
+                                    Backup & Disaster Recovery
+                                </a>
+                                <a class="" href="../security/mobile-device.html">
+                                    Mobile Device Management
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Digital Transformation</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../cloud.html">
+                                    Cloud Consultancy
+                                </a>
+                                <a class="" href="../cloud/business-intelligence.html">
+                                    Business Intelligence
+                                </a>
+                                <a class="" href="../cloud/power-platform.html">
+                                    PowerPlatform
+                                </a>
+                                <a class="" href="../cloud/sharepoint.html">
+                                    SharePoint
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Other</p>
+                        <div class="text-sm">
+                            <li class="grid grid-rows gap-2">
+                                <a class="" href="../about.html">
+                                    About Us
+                                </a>
+                                <a class="" href="../team.html">
+                                    Meet The Team
+                                </a>
+                                <a class="" href="../industry.html">
+                                    Industries
+                                </a>
+                                <a class="" href="../guiding-principles.html">
+                                    Guiding Principles
+                                </a>
+                                <a class="" href="../files/1101TermsandConditions.pdf" download>
+                                    Terms And Conditions
+                                </a>
+
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-white">
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray pb-4">Get In Touch</p>
+                        <div class="text-sm">
+                            <div class="grid grid-rows gap-2">
+                                <div class="gap-2">
+                                    <p><b>Address:</b> Sum Studios, Sheffield, S23AQ</p>
+                                </div>
+                                <div class="gap-2">
+                                    <p><b>Phone:</b><a href="tel:03334441101"> 0333 444 1101</a> </p>
+
+                                </div>
+                                <div class="gap-2">
+                                    <p class="font-bold">Email: </p>
+                                    <a href="mailto:hello@1101.co.uk">hello@1101.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:wSRIeei0ItT84ZPyG9kP -->    </div>
+
+    <script src="../livewire/livewire6b46.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'SKRzxHMYJazNGdbLE3zPucynBfrYrf6z0ZwnayyY';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+</body>
+
+
+<!-- Mirrored from 1101.co.uk/industry/engineering by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 12:31:18 GMT -->
+</html>
